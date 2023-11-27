@@ -81,16 +81,18 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 2fr 8fr;
+
 
   background-color: var(--clr-background);
   color: var(--clr-text);
-  
+  /* overflow: hidden; */
 }
 
 header {
   grid-area: 'header';
 
+  /* position: fixed; */
   height: 100vh;
   padding: 3em 2em;
   border-right: 1px solid var(--clr-text);
@@ -100,6 +102,9 @@ main {
   grid-area: 'main';
   width: 100%;
   padding: 3em 2em;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  height: 100vh;
 }
 
 footer {
@@ -156,6 +161,12 @@ h3 {
   font-size: 1.5em;
 }
 
+header nav {
+  & h1{
+    color: var(--clr-primary);
+  }
+}
+
 header ul {
   list-style: none;
   width: 100%;
@@ -163,10 +174,20 @@ header ul {
 }
 
 header li {
-  padding: .75em .75em;
+
   background-color: var(--clr-primary);
   border-radius: var(--sec-radius);
   margin-bottom: 1em;
+  display: flex;
+  overflow: hidden;
+
+  &:hover {
+    filter: var(--btn-hover);
+  }
+
+  &:active {
+    filter: var(--btn-active);
+  }
 }
 
 header li:last-child {
@@ -176,6 +197,10 @@ header li:last-child {
 header li a {
   text-decoration: none;
   text-transform: uppercase;
+  padding: 0 .75em;
+  align-self: center;
+  color: var(--clr-background);
+
 }
 
 .profile {
@@ -193,12 +218,19 @@ header li a {
   height: 10em;
   align-self: center;
   position: relative;
+}
 
+
+.icon {
+  background-color: var(--clr-background);
+  padding: 1em;
+  height: 100%;
+  border: 3px solid var(--clr-primary);
+  border-radius: var(--sec-radius);
 }
 
 
 /* BUTTON */  
-
   .button {
     margin: 1em 0.5em;
     padding: 0.75em 2em;
@@ -212,43 +244,108 @@ header li a {
     grid-area: b;
     transition: all 0.3s ease-in-out;
 
+    &:hover {
+      filter: var(--btn-hover);
+    }
+
+    &:active{
+      filter: var(--btn-active);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 50%;
+    }
+
+    &:disabled:hover {
+      filter: none;
+    }
+
+      
+    &.destructive {
+      background-color: var(--clr-accent);  }
+
+    &.recommended {
+      background-color: var(--clr-secondary);  }
+
+    &.minor {
+      background-color: transparent;
+      color: var(--clr-secondary);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.buttons p:first-child {
+      margin: 0;
+      padding: 0;
+    }
+
   }
 
-  .button:hover {
-    filter: var(--btn-hover);
-  }
-  .button:active{
-    filter: var(--btn-active);
-  }
-  
-  .button:disabled {
-    cursor: not-allowed;
-    opacity: 50%;
+  /* PROGRESS BAR */
+  .progress-bar {
+    background-color: var(--clr-accent);
+    width: 100%;
+    height: 1em;
+    border-radius: 1000px;
+    overflow: hidden;
+    margin: 1em 0;
+
   }
 
-  .button:disabled:hover {
-    filter: none;
-  }
-  
-  .destructive {
-    background-color: var(--clr-accent);  }
-  
-  .recommended {
-    background-color: var(--clr-secondary);  }
-  
-  .minor {
-    background-color: transparent;
-    color: var(--clr-secondary);
-  }
-  
-  .minor:hover {
-    text-decoration: underline;
+  .progress-bar span {
+    display: block;
+    background-color: var(--clr-secondary);
+    height: 100%;
   }
 
-  .buttons p:first-child {
-    margin: 0;
-    padding: 0;
+  .hand-foot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+
+    & section {
+      /* background-color: var(--clr-secondary); */
+      height: 30em;
+      border-radius: var(--sec-radius);
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1em;
+      width: 100%;
+    }
   }
+
+  .hand-foot article {
+    background-color: var(--clr-accent);
+    border-radius: var(--sec-radius);
+  }
+
+  .hand-foot .leaderboard {
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 1em;
+
+    &article {
+      background-color: var(--clr-primary);
+
+      width: 100%;
+      height: 100%;
+
+
+
+    }
+  }
+
+
+
+
+
+
+
 
   /* BREAKDOWN */
 
