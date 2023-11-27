@@ -192,6 +192,7 @@ header li {
 
 header li:last-child {
   margin: 3em 0 0 0;
+  position: relative;
 }
 
 header li a {
@@ -200,6 +201,20 @@ header li a {
   padding: 0 .75em;
   align-self: center;
   color: var(--clr-background);
+
+}
+
+.meer::after {
+  content: '';
+  position: absolute;
+  background-color: var(--clr-background);
+  width: 50px;
+  height: 70%;
+  bottom: 0;
+  right: 0;
+
+  border: 3px solid var(--clr-primary);
+  border-radius: 7px;
 
 }
 
@@ -234,7 +249,7 @@ header li a {
   .button {
     margin: 1em 0.5em;
     padding: 0.75em 2em;
-    font-size: 0.65em;
+    font-size: .7em;
     text-transform: uppercase;
     border-radius: var(--btn-radius);
     border-style: none;
@@ -329,13 +344,29 @@ header li a {
 
     gap: 1em;
 
-    &article {
+    & article {
       background-color: var(--clr-primary);
 
       width: 100%;
       height: 100%;
+      position: relative;
 
+      & span {
+        position: absolute;
+        bottom: 4px;
+        left: 4px;
+        padding: .2em .7em;
+        background-color: var(--clr-background);
+        border-radius: var(--sec-radius);
+        text-align: center;
+        display: grid;
+        grid-auto-columns:min-content;  
+        place-content:center;
+        text-align:center;
 
+        font-weight: var(--fat);
+        font-size: 1.2em;
+      }
 
     }
   }
