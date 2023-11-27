@@ -1,0 +1,265 @@
+/* FONTS */
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ regular.otf) format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ regular-italic.otf) format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ bold.otf) format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ bold-italic.otf) format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ light.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Halton";
+  src: url(assets/fonts/Halton/Halton\ light-italic.otf) format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    /* COLOUR */
+    --clr-primary: #AD97C9;
+    --clr-background: #272932;
+    --clr-text: #ecf8f8;
+    --clr-secondary: #519879;
+    --clr-accent: #fb8b24;  
+    
+    /* RADIUS */
+    --btn-radius: 1000px;
+    --sec-radius:.25em;
+
+      /*TYPOGRAPHY*/
+    --thin: 400; /* Halton-italic */
+    --chubby: 600 ; /* Halton-regular */
+    --fat: 800; /* Halton-bold */
+
+      /* BUTTON */
+  --btn-hover: brightness(120%);
+  --btn-active: brightness(80%);
+
+  /* FORMS */
+  --forms-focus: 3px solid var(--clr-primary);
+}
+
+html {
+  font-family: 'Halton', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  
+}
+
+header {
+  grid-area: 'header';
+
+  height: 100vh;
+  padding: 3em 2em;
+  border-right: 1px solid var(--clr-text);
+}
+
+main {
+  grid-area: 'main';
+  width: 100%;
+  padding: 3em 2em;
+}
+
+footer {
+  grid-area: 'footer';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  padding: 2.5em;
+  text-align: center;
+}
+
+footer ul{
+  list-style: none;
+
+  margin-bottom: .5em;
+}
+
+footer ul li {
+  display: inline-block;
+  margin:  0 .5em;
+}
+
+
+footer li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-text);
+}
+
+footer li a:hover {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.3em;
+  text-transform: uppercase;
+  font-family: 'Halton', sans-serif;
+  text-decoration: none;
+  color: var(--clr-text);
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+header ul {
+  list-style: none;
+  width: 100%;
+  margin-top: 3em;
+}
+
+header li {
+  padding: .75em .75em;
+  background-color: var(--clr-primary);
+  border-radius: var(--sec-radius);
+  margin-bottom: 1em;
+}
+
+header li:last-child {
+  margin: 3em 0 0 0;
+}
+
+header li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile_foto {
+  overflow: hidden;
+  border-radius: 10000000px;
+  background-image: url('assets/images/profile_pic.jpg');
+  background-size: contain;
+  background-color: #519879;
+  width: 10em;
+  height: 10em;
+  align-self: center;
+  position: relative;
+
+}
+
+
+/* BUTTON */  
+
+  .button {
+    margin: 1em 0.5em;
+    padding: 0.75em 2em;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    border-radius: var(--btn-radius);
+    border-style: none;
+    color: var(--clr-background);
+    background-color: var(--clr-primary);
+    cursor: pointer;
+    grid-area: b;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  .button:hover {
+    filter: var(--btn-hover);
+  }
+  .button:active{
+    filter: var(--btn-active);
+  }
+  
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 50%;
+  }
+
+  .button:disabled:hover {
+    filter: none;
+  }
+  
+  .destructive {
+    background-color: var(--clr-accent);  }
+  
+  .recommended {
+    background-color: var(--clr-secondary);  }
+  
+  .minor {
+    background-color: transparent;
+    color: var(--clr-secondary);
+  }
+  
+  .minor:hover {
+    text-decoration: underline;
+  }
+
+  .buttons p:first-child {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* BREAKDOWN */
+
+  .breakdown_blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+  }
+
+  .breakdown_blocks article{
+    height: 100px;
+    background-color: #519879;
+    border-radius: var(--sec-radius);
+  }
