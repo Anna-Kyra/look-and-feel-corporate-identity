@@ -204,19 +204,40 @@ header li a {
 
 }
 
-.meer::after {
+.meer {
+  position: relative;
+}
+
+.meer::before {
   content: '';
   position: absolute;
   background-color: var(--clr-background);
-  width: 50px;
+  width: 40px;
   height: 70%;
   bottom: 0;
   right: 0;
 
   border: 3px solid var(--clr-primary);
   border-radius: 7px;
+  
+}
+
+.meer::after {
+  content: '';
+ position: absolute;
+ right: .8em;
+ bottom: .5em;
+ width: 0;
+ height: 0;
+ border-left: .5em solid transparent;
+ border-right: .5em solid transparent;
+ border-top: .5em solid var(--clr-primary);
+ border-radius: 1000px;
+ clear: both;
 
 }
+
+
 
 .profile {
   display: flex;
@@ -225,7 +246,7 @@ header li a {
 
 .profile_foto {
   overflow: hidden;
-  border-radius: 10000000px;
+  border-radius: var(--btn-radius);
   background-image: url('assets/images/profile_pic.jpg');
   background-size: contain;
   background-color: #519879;
@@ -242,6 +263,13 @@ header li a {
   height: 100%;
   border: 3px solid var(--clr-primary);
   border-radius: var(--sec-radius);
+
+  & img {
+    display: block;
+    width: 25px;
+    height: 25px;
+  }
+  
 }
 
 
