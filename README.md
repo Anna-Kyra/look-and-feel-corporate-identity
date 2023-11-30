@@ -19,6 +19,10 @@ Hierbij zijn de volgende betrokkenen belangrijk om te vergelijken: medewerkers, 
 
 ![BODY](https://github.com/Anna-Kyra/look-and-feel-corporate-identity/assets/144000242/df4313c0-96a2-4c54-9850-bf6dfbae6fe7)
 
+Website: https://anna-kyra.github.io/look-and-feel-corporate-identity/
+
+Figma-prototype: https://www.figma.com/proto/ufVT07LCxFvkIZvxLI2J3G/Hand---Footprint?node-id=1-15&starting-point-node-id=1%3A15&scaling=scale-down
+
 ### Userstories
 CEO: Als bedrijfseigenaar wil ik een goed overzicht van hoe milieuvriendelijk mijn bedrijf is.
 
@@ -26,8 +30,6 @@ CEO: Als bedrijfseigenaar wil ik zien wat voor een invloed ieder van mijn stakeh
 
 CEO: Als bedrijfseigenaar wil ik een berekening hebben van mijn hand- en footprint en van mijn stakeholders.
 
-website link: 
-Figma link: 
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
@@ -121,6 +123,8 @@ Figma link:
 
 
 ## Bronnen
+* Website: https://anna-kyra.github.io/look-and-feel-corporate-identity/
+* Figma-prototype: https://www.figma.com/proto/ufVT07LCxFvkIZvxLI2J3G/Hand---Footprint?node-id=1-15&starting-point-node-id=1%3A15&scaling=scale-down
 
 ## Licentie
 
